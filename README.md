@@ -115,7 +115,7 @@ print("\n Amostra de Dados de Agronegócios")
 print(df_registros_agro.head())
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/wSanice/leblanc/main/assets/logo.png" alt="Leblanc Logo" width="300"/>
+  <img src="https://raw.githubusercontent.com/wSanice/leblanc/refs/heads/main/assets/leblanc.png" alt="Leblanc Banner" width="100%"/>
 </p>
 
 ## IV. Licença
