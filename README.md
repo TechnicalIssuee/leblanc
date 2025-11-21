@@ -114,6 +114,9 @@ df_registros_agro = generate_agribusiness_records(num_records=500)
 print("\n Amostra de Dados de Agronegócios")
 print(df_registros_agro.head())
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wSanice/leblanc/main/assets/logo.png" alt="Leblanc Logo" width="300"/>
+</p>
 
 ## IV. Licença
 
