@@ -10,5 +10,5 @@ build/
 *.egg-info/
 .vscode/
 .idea/
-/leblanc.egg-info
-/leblanc.egg-info
+/leblanc.egg-info/
+__pycache__/
