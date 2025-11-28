@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: leblanc
-Version: 0.6.0
+Version: 0.6.1
 Summary: A Python library to generate various synthetic DataFrames for different business sectors (Tech, Food, Finance, Apparel, forestry, etc.).
 Home-page: https://github.com/wSanice/leblanc
 Author: wSanice
@@ -132,6 +132,9 @@ df_registros_agro = generate_agribusiness_records(num_records=500)
 print("\n Amostra de Dados de Agronegócios")
 print(df_registros_agro.head())
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wSanice/leblanc/refs/heads/main/assets/leblanc.png" alt="Leblanc Banner" width="100%"/>
+</p>
 
 ## IV. Licença
 
